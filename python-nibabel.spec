@@ -2,7 +2,7 @@
 %define name	python-%{module}
 # Need git version as the upstream one does not work with invesalius
 %define version	0.2.20100816
-%define release	%mkrel 1
+%define release	%mkrel 2
 
 Summary:	Access a cacophony of neuro-imaging file formats
 Name:		%{name}
