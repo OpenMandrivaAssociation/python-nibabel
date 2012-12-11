@@ -41,3 +41,15 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record
 
 %files -f FILELIST
 %defattr(-,root,root)
+
+
+%changelog
+* Thu Nov 04 2010 Paulo Andrade <pcpa@mandriva.com.br> 0.2.20100816-2mdv2011.0
++ Revision: 593512
++ rebuild (emptylog)
+
+* Mon Aug 16 2010 Paulo Andrade <pcpa@mandriva.com.br> 0.2.20100816-1mdv2011.0
++ Revision: 570609
+- Import python nibabel using git master version
+- python-nibabel
+
