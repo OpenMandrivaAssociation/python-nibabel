@@ -5,7 +5,7 @@ Summary:	Access a cacophony of neuro-imaging file formats
 
 Name:		python-%{module}
 Version:	0.2.20100816
-Release:	2
+Release:	3
 # git clone http://github.com/hanke/nibabel.git python-nibabel
 # cd python-nibabel
 # git archive --format tar 4f062e8a4f4bcceea4e8e1ff3fc7f897af06fa46 --prefix python-nibabel-0.2.20100816/ | bzip2 > python-nibabel.tar.bz2
