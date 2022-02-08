@@ -22,10 +22,10 @@ BuildRequires:  python3dist(scipy)
 BuildRequires:  python3dist(setuptools)
 BuildRequires:  python3dist(six)
 
-Requires:       python3-six
-Requires:       python3-numpy
-Recommends:     python3-scipy
-Recommends:     python3-pydicom
+Requires:       python-six
+Requires:       python-numpy
+Recommends:     python-scipy
+Recommends:     python-pydicom
 
 BuildArch:	noarch
 
