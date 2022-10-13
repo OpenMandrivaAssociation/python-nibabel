@@ -1,31 +1,34 @@
-%define module	nibabel
+%global module	nibabel
+%global fname %(m=%{module}; echo ${m:0:1})
 
 Summary:	Access a cacophony of neuro-imaging file formats
 Name:		python-%{module}
-Version:	3.2.2
+Version:	4.0.2
 Release:	1
-Source0:        https://github.com/nipy/nibabel/archive/refs/tags/%{version}/%{module}-%{version}.tar.gz
-License:        MIT and BSD
+#Source0:	https://github.com/nipy/nibabel/archive/refs/tags/%{version}/%{module}-%{version}.tar.gz
+Source0:	https://pypi.io/packages/source/%{fname}/%{module}/%{module}-%{version}.tar.gz
+
+License:	MIT and BSD
 Group:		Development/Python
 Url:		http://nipy.sourceforge.net
 
 
-BuildRequires:  pkgconfig(python3)
-BuildRequires:  python3dist(h5py)
-BuildRequires:  python3dist(matplotlib)
-BuildRequires:  python3dist(mock)
-BuildRequires:  python3dist(nose)
-BuildRequires:  python3dist(numpy)
-BuildRequires:  python3dist(pillow)
-BuildRequires:  python3dist(pydicom)
-BuildRequires:  python3dist(scipy)
-BuildRequires:  python3dist(setuptools)
-BuildRequires:  python3dist(six)
+BuildRequires:	pkgconfig(python3)
+BuildRequires:	python3dist(h5py)
+BuildRequires:	python3dist(matplotlib)
+BuildRequires:	python3dist(mock)
+BuildRequires:	python3dist(nose)
+BuildRequires:	python3dist(numpy)
+BuildRequires:	python3dist(pillow)
+BuildRequires:	python3dist(pydicom)
+BuildRequires:	python3dist(scipy)
+BuildRequires:	python3dist(setuptools)
+BuildRequires:	python3dist(six)
 
-Requires:       python-six
-Requires:       python-numpy
-Recommends:     python-scipy
-Recommends:     python-pydicom
+Requires:		python-six
+Requires:		python-numpy
+Recommends:		python-scipy
+Recommends:		python-pydicom
 
 BuildArch:	noarch
 
