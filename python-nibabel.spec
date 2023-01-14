@@ -1,17 +1,12 @@
-%global module	nibabel
-%global fname %(m=%{module}; echo ${m:0:1})
-
 Summary:	Access a cacophony of neuro-imaging file formats
-Name:		python-%{module}
-Version:	4.0.2
+Name:		python-nibable
+Version:	5.0.0
 Release:	1
-#Source0:	https://github.com/nipy/nibabel/archive/refs/tags/%{version}/%{module}-%{version}.tar.gz
-Source0:	https://pypi.io/packages/source/%{fname}/%{module}/%{module}-%{version}.tar.gz
-
 License:	MIT and BSD
 Group:		Development/Python
 Url:		http://nipy.sourceforge.net
-
+#Source0:	https://github.com/nipy/nibabel/archive/refs/tags/%{version}/nibabel-%{version}.tar.gz
+Source0:	https://pypi.io/packages/source/n/nibabel/nibabel-%{version}.tar.gz
 
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python3dist(h5py)
@@ -20,15 +15,17 @@ BuildRequires:	python3dist(mock)
 BuildRequires:	python3dist(nose)
 BuildRequires:	python3dist(numpy)
 BuildRequires:	python3dist(pillow)
+BuildRequires:	python3dist(pip)
 BuildRequires:	python3dist(pydicom)
 BuildRequires:	python3dist(scipy)
 BuildRequires:	python3dist(setuptools)
 BuildRequires:	python3dist(six)
+BuildRequires:	python3dist(wheel)
 
-Requires:		python-six
-Requires:		python-numpy
-Recommends:		python-scipy
-Recommends:		python-pydicom
+Requires:	python-six
+Requires:	python-numpy
+Recommends:	python-scipy
+Recommends:	python-pydicom
 
 BuildArch:	noarch
 
@@ -50,16 +47,17 @@ NumPy arrays.
 %license COPYING
 %doc AUTHOR Changelog README.rst TODO
 %{_bindir}/*
-%{python3_sitelib}/%{module}*
+%{py_puresitedir}/nibabel/
+%{py_puresitedir}/nibabel-*.*-info/
 %{python3_sitelib}/nisext/
 
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -n %{module}-%{version}
+%autosetup -n nibabel-%{version}
 
 %build
-%py3_build
+%py_build
 
 %install
-%py3_install
+%py_install
