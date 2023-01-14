@@ -10,6 +10,7 @@ Source0:	https://pypi.io/packages/source/n/nibabel/nibabel-%{version}.tar.gz
 
 BuildRequires:	pkgconfig(python3)
 BuildRequires:	python3dist(h5py)
+BuildRequires:  python3dist(hatchling)
 BuildRequires:	python3dist(matplotlib)
 BuildRequires:	python3dist(mock)
 BuildRequires:	python3dist(nose)
