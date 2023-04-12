@@ -9,24 +9,26 @@ Url:		http://nipy.sourceforge.net
 Source0:	https://pypi.io/packages/source/n/nibabel/nibabel-%{version}.tar.gz
 
 BuildRequires:	pkgconfig(python3)
-BuildRequires:	python3dist(h5py)
-BuildRequires:  python3dist(hatchling)
-BuildRequires:	python3dist(matplotlib)
-BuildRequires:	python3dist(mock)
-BuildRequires:	python3dist(nose)
-BuildRequires:	python3dist(numpy)
-BuildRequires:	python3dist(pillow)
-BuildRequires:	python3dist(pip)
-BuildRequires:	python3dist(pydicom)
-BuildRequires:	python3dist(scipy)
-BuildRequires:	python3dist(setuptools)
-BuildRequires:	python3dist(six)
-BuildRequires:	python3dist(wheel)
+BuildRequires:	python%{py_ver}dist(h5py)
+BuildRequires:	python%{py_ver}dist(hatch-vcs)
+BuildRequires:	python%{py_ver}dist(hatchling)
+BuildRequires:	python%{py_ver}dist(matplotlib)
+BuildRequires:	python%{py_ver}dist(mock)
+BuildRequires:	python%{py_ver}dist(nose)
+BuildRequires:	python%{py_ver}dist(numpy)
+BuildRequires:	python%{py_ver}dist(pillow)
+BuildRequires:	python%{py_ver}dist(pip)
+BuildRequires:	python%{py_ver}dist(pydicom)
+BuildRequires:	python%{py_ver}dist(scipy)
+BuildRequires:	python%{py_ver}dist(setuptools)
+BuildRequires:	python%{py_ver}dist(six)
+BuildRequires:	python%{py_ver}dist(wheel)
 
-Requires:	python-six
-Requires:	python-numpy
-Recommends:	python-scipy
-Recommends:	python-pydicom
+Requires:	python%{py_ver}dist(six)
+Requires:	python%{py_ver}dist(numpy)
+
+Recommends:	python%{py_ver}dist(scipy)
+Recommends:	python%{py_ver}dist(pydicom)
 
 BuildArch:	noarch
 
