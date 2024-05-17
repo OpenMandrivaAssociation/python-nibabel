@@ -1,6 +1,6 @@
 Summary:	Access a cacophony of neuro-imaging file formats
 Name:		python-nibable
-Version:	5.1.0
+Version:	5.2.1
 Release:	1
 License:	MIT and BSD
 Group:		Development/Python
