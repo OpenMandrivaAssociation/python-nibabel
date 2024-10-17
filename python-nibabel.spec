@@ -4,7 +4,7 @@ Version:	5.2.1
 Release:	1
 License:	MIT and BSD
 Group:		Development/Python
-Url:		http://nipy.sourceforge.net
+Url:		https://nipy.sourceforge.net
 #Source0:	https://github.com/nipy/nibabel/archive/refs/tags/%{version}/nibabel-%{version}.tar.gz
 Source0:	https://pypi.io/packages/source/n/nibabel/nibabel-%{version}.tar.gz
 
